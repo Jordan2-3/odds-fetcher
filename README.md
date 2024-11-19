@@ -4,12 +4,14 @@ Lambda function to fetch and send betting odds data to Discord
 # Sports Odds Data Automation with AWS and Discord Integration
 
 Overview
+
 This project automates the process of fetching sports betting odds data, storing it in AWS S3, and sending 
 notifications with presigned URLs to a Discord channel. It provides real-time updates on sports odds for
 basketball (NBA, NCAAB) and football (NFL, NCAAF) directly on a Discord channel. This project leverages AWS Lambda for 
 serverless architecture, The Odds API for sports data, and Discord webhooks for notifications.
 
 Features
+
 Automated Data Fetching: Retrieves the latest sports betting odds for multiple sports from The Odds API.
 Efficient Data Storage: Saves each sport’s combined odds data in JSON format in AWS S3 with a timestamped file name.
 Real-Time Notifications: Sends presigned S3 URLs for each odds file to a specified Discord channel, allowing easy 
@@ -19,6 +21,7 @@ Error Handling & Logging: Provides feedback on API and S3 errors and ensures tha
 Serverless Architecture: Uses AWS Lambda for automation, reducing infrastructure maintenance and cost.
 
 Setup Instructions
+
 Prerequisites
 1. AWS Account with permissions to create and manage Lambda functions and S3 buckets.
 2. Discord Webhook URL: Create a webhook for your Discord channel to receive notifications. 
