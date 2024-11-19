@@ -45,24 +45,49 @@ API Errors: Logs and skips the market if The Odds API returns an error.
 Discord Character Limit: Ensures that messages are within Discord’s 2000-character limit. If necessary, splits messages by sport to keep within the limit.
 
 python Code Overview
+
 import os
+
 import requests
+
 import json
+
 import boto3
+
 from datetime import datetime
 
 def fetch_odds(event, context):
+
     # Main function to fetch odds data and send to Discord
     ...
 
 def generate_presigned_url(file_name):
+
     # Generates a presigned URL for an S3 file
     ...
 
 def post_to_discord_with_latest_odds():
+
     # Constructs and sends a message with presigned URLs to Discord
     ...
 
+Limitations & Future Improvements
 
+Known Limitations
+Message Length Limit: Currently, the Discord message has to be split by sport if it exceeds 2000 characters.
 
-Future plans
+Data Availability: Only works for sports and markets supported by The Odds API.
+
+Future Improvements
+
+Add Player Props: Integrate popular player prop odds when available via The Odds API.
+
+Expand to Other Sports: Support more sports as The Odds API expands its coverage.
+
+Enhanced Error Reporting: Add more detailed error messages and logging for better debugging.
+
+UI Dashboard: Build a dashboard to visualize the odds data instead of sending raw JSON files.
+
+License
+
+This project is open-source and available under the Apache License 2.0. See the LICENSE file for more details.
