@@ -12,7 +12,7 @@ def fetch_odds(event, context):
 
     # Initialize S3 client
     s3 = boto3.client('s3')
-    bucket_name = 'my-betting-odds-data-bucket'  # Replace with your actual S3 bucket name
+    bucket_name = 'S3-bucket'  # Replace with your actual S3 bucket name
 
     # Loop through each sport and market type
     for sport in sports:
